@@ -1,6 +1,5 @@
 const generateManager = manager => {
     return `
-    <div class="d-flex flex-wrap justify-content-center vh-100 align-items-center">
         <div class="card" style="width: 18rem;">
             <div class="bg-primary">
                 <h3 class="ml-3">${manager.name}</h3>
@@ -16,13 +15,11 @@ const generateManager = manager => {
 
             </div>
         </div>
-    </div>
     `
 }
 
 const generateEngineer = engineer => {
     return `
-    <div class="d-flex flex-wrap justify-content-center vh-100 align-items-center">
         <div class="card" style="width: 18rem;">
             <div class="bg-primary">
                 <h3 class="ml-3">${engineer.name}</h3>
@@ -38,13 +35,11 @@ const generateEngineer = engineer => {
 
             </div>
         </div>
-    </div>
     `
 }
 
 const generateIntern = intern => {
     return `
-    <div class="d-flex flex-wrap justify-content-center vh-100 align-items-center">
         <div class="card" style="width: 18rem;">
             <div class="bg-primary">
                 <h3 class="ml-3">${intern.name}</h3>
@@ -60,11 +55,10 @@ const generateIntern = intern => {
 
             </div>
         </div>
-    </div>
     `
 }
 
-generateHTML = data => {
+generateSite = data => {
 
     pageArray = [];
 
@@ -110,12 +104,14 @@ const generateTeamPage = employeeCards => {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="./s.css" />
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
     <header class="bg-danger text-center" id="header">My Team</header>
+    <div class="d-flex flex-wrap justify-content-center vh-100 align-items-center">
     ${employeeCards}
+    </div>
 </body>
 
 </html>
